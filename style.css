@@ -1,0 +1,25 @@
+body {
+    background: url('/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.Main-container {
+    backdrop-filter: blur(10px);
+}
+
+.weather-body img, .location-not-found img {
+    width: 80%;
+}
+
+.weather-details i {
+    font-size: 36px;
+}
+
+h2{
+    font-weight: bold;
+    font-size: x-large;
+}
+img{
+    
+
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black flex items-center justify-center min-h-screen">
+    <div class="Main-container w-full max-w-4xl p-8 bg-gray-800 bg-opacity-75 rounded-lg shadow-lg">
+        <div class="container bg-white rounded-lg p-6">
+            <div class="header mb-4">
+                <div class="search-box flex items-center">
+                    <input type="text" id="cityInput" placeholder="Enter your location" class="w-full p-3 text-black rounded-lg">
+                    <button id="searchBtn" class="ml-4 p-3 bg-blue-500 text-white rounded-lg">Submit</button>
+                </div>
+                <button id="currentLocationBtn" class="mt-4 p-3 bg-green-500 text-white rounded-lg w-full">Use Current Location</button>
+            </div>
+
+            <div class="location-not-found hidden flex-col items-center">
+                <h1 class="text-xl text-gray-500 mb-4">Sorry, Location not found!!!</h1>
+                <img src="assets/404.png" alt="404 Error" class="w-80">
+            </div>
+
+            <div class="weather-body hidden flex-col items-center">
+                <h2></h2>
+                <img src="" alt="Weather Image" class="weather-img w-1/2">
+                <div class="weather-box text-center mt-4">
+                    <p class="temperature text-4xl font-bold"> <sup>°C</sup></p>
+                    <p class="description text-xl font-semibold capitalize">light rain</p>
+                </div>
+                <div class="weather-details flex justify-between mt-6 w-full">
+                    <div class="humidity flex items-center ml-4">
+                        <i class="fa-sharp fa-solid fa-droplet text-3xl"></i>
+                        <div class="text ml-2">
+                            <span id="humidity" class="text-xl font-bold"></span>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="wind flex items-center mr-4">
+                        <i class="fa-solid fa-wind text-3xl"></i>
+                        <div class="text ml-2">
+                            <span id="wind-speed" class="text-xl font-bold"></span>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="extended-forecast" class="hidden mt-6">
+                <h2 class="text-2xl font-bold mb-4">Extended Forecast</h2>
+                <div class="forecast-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <!-- Extended forecast data will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
